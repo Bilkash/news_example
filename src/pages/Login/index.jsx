@@ -10,8 +10,6 @@ export default function Login() {
 	function handleLogin () {
 		if (password === "12345" && login === "admin") {
 			localStorage.setItem("news_auth", "true");
-
-			history.push("/profile");
 		}
 	}
 
