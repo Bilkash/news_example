@@ -5,7 +5,7 @@ import "./index.css";
 export default function LoginError() {
 	return (
 		<div className={"error"}>
-			Error. Login or password is incorrect. Please try again.
+			The username or password you entered is incorrect
 		</div>
 	);
 }
