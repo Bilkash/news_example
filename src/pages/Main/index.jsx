@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
 export default function Main() {
+	const authLS = localStorage.getItem("news_auth");
+
 	return (
 		<Container>
 			<h1>Same example App</h1>
@@ -16,7 +18,7 @@ export default function Main() {
 				Please, log in for check this functional
 			</div>
 
-			<LinkContainer to={"/login"}>
+			<LinkContainer to={authLS && authLS === "true" ? "/profile" : "/login"}>
 				<Button>
 					Log in
 				</Button>
