@@ -1,11 +1,14 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import {Container, Nav, Navbar} from "react-bootstrap";
+import Login from "../Login";
+import {useSelector} from "react-redux";
 
 import "./index.css";
-import Login from "../Login";
 
 export default function Layout({children}) {
+	const {auth} = useSelector(state => state);
+
 	return (
 		<div>
 			<Navbar bg="ligth" expand="lg">
@@ -25,6 +28,12 @@ export default function Layout({children}) {
 							<LinkContainer to={"/news"}>
 								<div className={"item"}>
 									News
+								</div>
+							</LinkContainer>
+
+							<LinkContainer to={auth ? "/profile" :"/login"}>
+								<div className={"item"}>
+									{"Profile"}
 								</div>
 							</LinkContainer>
 						</Nav>

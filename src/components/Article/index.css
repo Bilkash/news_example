@@ -1,0 +1,20 @@
+.article {
+    margin-bottom: 25px;
+}
+
+.article_head {
+    display: flex;
+
+    margin-bottom: 25px;
+
+    gap: 25px;
+}
+
+.img {
+    width: 50%;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}

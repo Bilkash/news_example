@@ -30,6 +30,8 @@ export default function Login() {
 
 	return (
 		<Container>
+			<h2>Please, log in</h2>
+
 			<Form className={"form"}>
 				<input
 					placeholder={"Username"}
