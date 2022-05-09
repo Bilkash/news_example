@@ -10,7 +10,11 @@ Use next dependencies:
 * [Bootstrap](https://getbootstrap.com/)
 * [Redux](https://redux.js.org/)
 
-## For app start
+## Public hosting 
+
+[Vercel](https://news-example.vercel.app/)
+
+## For app start on local environment
 
 In first run next command:
 
