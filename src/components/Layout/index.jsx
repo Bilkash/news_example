@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 import "./index.css";
 
 export default function Layout({children}) {
-	const {auth} = useSelector(state => state);
+	const {auth: {value: auth}} = useSelector(state => state);
 
 	return (
 		<div>

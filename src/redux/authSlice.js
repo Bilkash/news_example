@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const authSlice = createSlice({
 	name: "auth",
-	initialState: false,
+	initialState: {
+		value: false
+	},
 	reducers: {
-		logIn: () => true,
-		logOut: () => false,
+		logIn: (state) => state.value = true,
+		logOut: (state) => state.value = false,
 	}
 });
 

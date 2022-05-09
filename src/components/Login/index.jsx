@@ -3,7 +3,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useSelector} from "react-redux";
 
 export default function Login()  {
-	const {auth} = useSelector(state => state);
+	const {auth: {value: auth}} = useSelector(state => state);
 
 	return (
 		<LinkContainer to={auth ? "/profile" :"/login"}>
