@@ -1,20 +1,24 @@
 .article {
     margin-bottom: 25px;
-}
-
-.article_head {
-    display: flex;
-
-    margin-bottom: 25px;
-
-    gap: 25px;
-}
-
-.img {
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "title title title source date";
 }
 
 .link {
     text-decoration: none;
     color: black;
+}
+
+.title {
+    grid-area: title;
+}
+
+.source {
+    grid-area: source;
+}
+
+.date {
+    grid-area: date;
 }
