@@ -9,11 +9,11 @@ export default function News() {
 	const [list, setList] = useState([]);
 
 	const fetchData = async () => {
-		const response = await axios.get("https://google-news1.p.rapidapi.com/top-headlines",
+		const response = await axios.get("https://newscatcher.p.rapidapi.com/v1/latest_headlines",
 			{
-				params: {country: "US", lang: "en", limit: "50"},
+				params: {lang: "en", media: "True"},
 				headers: {
-					"X-RapidAPI-Host": "google-news1.p.rapidapi.com",
+					"X-RapidAPI-Host": "newscatcher.p.rapidapi.com",
 					"X-RapidAPI-Key": "1dd1404054msh27880aa8c28e432p1596c4jsncb87c8f6579e"
 				}
 			}).then(res => res);

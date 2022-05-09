@@ -4,30 +4,44 @@ import moment from "moment";
 import "./index.css";
 
 export default function Article({
-	title,
+	author,
+	clean_url,
 	link,
+	media,
+	summary,
+	title,
 	published_date,
-	source: {
-		title: sourseTitle,
-		url
-	}
 }) {
 	return (
 		<div className={"article"}>
-			<div className={"title"}>
-				<a href={link} className={"link"}>
-					<h3>{title}</h3>
-				</a>
+			<div className={"article_head"}>
+				<img src={media} className={"pic"}/>
+
+				<div className={"article_info"}>
+					<div className={"title"}>
+						<a href={link} className={"link"}>
+							<h3>{title}</h3>
+						</a>
+					</div>
+
+					<div className={"source"}>
+						<a href={clean_url} className={"link"}>
+							<div>Source: {clean_url}</div>
+						</a>
+					</div>
+
+					<div className={"date"}>
+						{moment(published_date).format("MMMM DD, YYYY")}
+					</div>
+				</div>
 			</div>
 
-			<div className={"source"}>
-				<a href={url} className={"link"}>
-					<div>Source: {sourseTitle}</div>
-				</a>
+			<div>
+				{summary}
 			</div>
 
-			<div className={"date"}>
-				{moment(published_date).format("MMMM DD, YYYY")}
+			<div>
+				Author {author ?? ""}
 			</div>
 		</div>
 	);

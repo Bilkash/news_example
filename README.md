@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-For feed use https://newsapi.org/
+For feed use [Rapid API](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/)
 
 Use next dependencies:
 * [Axios](https://www.npmjs.com/package/axios)
@@ -14,7 +14,7 @@ Use next dependencies:
 
 In first run next command:
 
-###`npm install`
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\

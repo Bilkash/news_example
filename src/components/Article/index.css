@@ -1,9 +1,26 @@
 .article {
     margin-bottom: 25px;
+}
+
+.article_head {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.pic {
+    width: 50%;
+}
+
+.article_info {
+    margin-bottom: 25px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "title title title source date";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+            "title title"
+            "title title"
+            "date source";
 }
 
 .link {
